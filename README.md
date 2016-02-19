@@ -5,7 +5,7 @@ Oranda is a simple web application for converting HTML pages to PDF.  It provide
 ## Requirements:
 
 * [Sinatra](http://www.sinatrarb.com)
-* [WK<HTML>TOpdf](http://wkhtmltopdf.org)
+* [WKHTMLTOpdf](http://wkhtmltopdf.org)
 
 ## Usage:
 
