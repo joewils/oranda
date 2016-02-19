@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include 'partials/head' %}
+  <body>
+    <div class="container">
+      {% include 'partials/masthead' %}
+      <div class="jumbotron">
+        <h1><span class="glyphicon glyphicon-print" aria-hidden="true"></span> Oranda</h1>
+        <div class="row">
+          <div class="col-xs-6">
+            <h2>About</h2>
+            <p>Oranda is a simple web application for converting HTML pages to PDF documents.</p>
+            <h2>Try it!</h2>
+            <div>
+              <form method="post" action="/pdf" role="form">
+                <input id="show_me" name="show_me" type="hidden" value="true" />
+                <div class="input-group">
+                  <input id="url" name="url" type="text" class="form-control" value="http://www.joecode.com">
+                  <div class="input-group-btn">
+                    <input class="btn btn-primary" type="submit" value="Convert"/>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <h3><i>Oranda?</i></h3>
+            <p>The <a href="https://en.wikipedia.org/wiki/Oranda">oranda</a> is a chubby, popular, and fairly useless goldfish.  Much like PDF... </p>
+          </div><!-- col-xs-6 -->
+          <div class="col-xs-6">
+            <h3>JSON Example using Curl</h3>
+            <pre>curl -F 'url=http://www.joecode.com' http://localhost:4567/pdf</pre>
+            <h4>Result</h4>
+            <pre>{"status":"success", "pdf":"/pdf/71fc24f5-6e0b-4983-bd86-269d78fbdb72.pdf"}</pre>
+          </div><!-- col-xs-6 -->
+        </div>
+      </div>
+      {% include 'partials/footer' %}
+    </div> <!-- /container -->
+  </body>
+</html>

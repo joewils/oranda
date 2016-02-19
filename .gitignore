@@ -1,0 +1,5 @@
+# ignore OSX garbage
+*.DS_Store
+
+# ignore PDF documents
+public/pdf/*.pdf
