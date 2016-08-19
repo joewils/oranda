@@ -12,7 +12,7 @@ post '/pdf' do
     # Build filename using a GUID
     name = 'public/pdf/' + UUIDTools::UUID.random_create.to_s + '.pdf'
     # System Command to Execute
-    cmd = 'wkhtmltopdf --print-media-type ' + url + ' ' + name
+    cmd = 'wkhtmltopdf -T 4mm -R 2mm -B 3mm -L 2mm -s Letter --print-media-type ' + url + ' ' + name
     # Execute WKHTMLTOPDF
     Open3.popen2e(cmd) do |stdin, stdout, wait_thr|
       puts stdout.read
