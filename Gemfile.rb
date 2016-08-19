@@ -1,6 +1,3 @@
 source 'https://rubygems.org'
 gem 'liquid'
 gem 'sinatra'
-gem 'json'
-gem 'uuidtools'
-gem 'uri'
